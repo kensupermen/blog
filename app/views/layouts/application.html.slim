@@ -9,4 +9,7 @@ html
   body
     = render 'layouts/navbar'
     .container
+      - if flash.any?
+        .div.flash_messages
+          = flash_messages
       = yield
