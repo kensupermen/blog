@@ -1,0 +1,18 @@
+nav#mainNav.navbar.navbar-toggleable-md.navbar-light
+  button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation"]
+    span.navbar-toggler-icon
+  .container
+    a.navbar-brand[href="/"]
+      = Blog
+    #navbarExample.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        - if current_user
+          li.nav-item
+            = link_to "Post", "/", class: 'nav-link'
+          li.nav-item
+            = link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link'
+        - else
+          li.nav-item
+            = link_to "Sign in", new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to "Sign up", new_user_session_path, class: 'nav-link'
