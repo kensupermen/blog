@@ -9,13 +9,15 @@
 
 
 User.create email: 'robot@gmail.com', password: '123456'
+User.create email: 'robot2@gmail.com', password: '123456'
+User.create email: 'robot3@gmail.com', password: '123456'
 
 10.times {
-  Article.create title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph
+  Article.create user_id: 1, title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(10, true, 100)
 }
 
 10.times {
   Comment.create user_id: 1, comment_message: Faker::Lorem.paragraph, article_id: 1
-  Comment.create user_id: 1, comment_message: Faker::Lorem.paragraph, article_id: 2
+  Comment.create user_id: 2, comment_message: Faker::Lorem.paragraph, article_id: 2
 }
 

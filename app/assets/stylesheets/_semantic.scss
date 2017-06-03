@@ -1,37 +1,49 @@
-a.new, a.edit, a.delete {
-  @extend .btn;
-
-  &:before {
-    font-family: "FontAwesome";
-    padding-right: 0.5em;
-  }
-}
-
-a.new {
-  @extend .btn-success;
-
-  &:before {
-    @extend .fa-plus
-  }
-}
-
-a.edit {
-  @extend .btn-primary;
-
-  &:before {
-    @extend .fa-pencil;
-  }
-}
-
-a.delete {
-  @extend .btn-danger;
-
-  &:before {
-    @extend .fa-trash;
-  }
-}
-
 .flash_messages {
-  margin: 30px;
   color: black;
+}
+.time_created {
+  font-size: 12px;
+  float: right;
+}
+
+.container_custom {
+  @extend .container;
+  margin-top: 20px;
+}
+
+.search {
+  margin: auto 80%;
+}
+
+hr {
+  border-top: 1px solid #d0c9c9
+}
+
+p {
+  text-indent: 30px;
+  margin-top: 10px;
+}
+
+body {
+  margin-bottom: 50px;
+}
+.username {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.comment-message {
+  text-indent: 20px;
+}
+
+.comment-box {
+  margin: 10px 0px 10px 0px; 
+}
+
+.article-body {
+  min-height: 500px;
+}
+
+.article-title {
+  margin-bottom: 30px;
 }

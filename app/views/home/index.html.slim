@@ -1,2 +1,9 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+header.masthead
+      .header-content
+        .header-content-inner
+          h1#homeHeading
+            | Wellcome to my blog
+          hr
+          p
+            | My blog has been built with Ruby On Rails 
+          = link_to 'Let\'s try', api_v1_articles_path, class: 'btn btn-primary'

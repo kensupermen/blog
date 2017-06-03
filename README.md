@@ -13,9 +13,9 @@ URL:
 #### Website
 
 - [x] Allows users to log in/log out.
-- [ ] Allows users to create new blog post.
-- [ ] Allows users to post comments.
-- [ ] Allows visitors to view post list, and sort them by created date.
+- [x] Allows users to create new blog post.
+- [x] Allows users to post comments.
+- [x] Allows visitors to view post list, and sort them by created date.
 - [x] Seed data for posts and users.
 
 #### API
@@ -26,7 +26,7 @@ URL:
 #### Additional
 
 - [ ] Deploy your work on Heroku.
-- [ ] Push your code to Github.
+- [x] Push your code to Github.
 - [x] Bootstrap for UI.
 
 ## Notes

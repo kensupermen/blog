@@ -1,0 +1,23 @@
+.article-title
+  h1
+    = @article.title
+.article-body
+  p
+    = @article.body
+
+hr
+
+.comment-box
+  h1 Comment
+  = simple_form_for @comment, url: api_v1_article_comments_path(@article), method: :post, remote: true do |f|
+    = f.input :comment_message, placeholder: "Add a comment", class: "form-control"
+    = f.button :submit, class: "btn btn-primary"
+
+.comment-list
+  - @comments.each do |comment|
+    .comment
+      .username
+        = User.find_by_id(comment.user_id).email + ": "
+      .comment-message
+        = comment.comment_message
+
