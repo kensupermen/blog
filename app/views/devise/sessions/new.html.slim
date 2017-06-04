@@ -2,7 +2,7 @@
   .box-shadow
     h2
       = "Login"
-    = form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f|
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .form-group
         = f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email'
       .form-group

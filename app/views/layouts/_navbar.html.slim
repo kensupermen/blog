@@ -3,9 +3,9 @@
     a.navbar-brand[href="/"]
       = Blog
     .collapse.navbar-collapse
-      form.navbar-form.navbar-left
-        = form_tag api_v1_search_path, class: 'form-group search', method: :post do
-          = text_field_tag 'search', placeholder="Search article", class: 'form-control'
+      .navbar-form.navbar-left
+        = form_tag api_v1_search_path, class: 'form-group search', method: :get do
+          = text_field_tag 'search', nil, placeholder:'Search article', class: 'form-control'
       ul.nav.navbar-nav.navbar-right
         - if current_user
           li.nav-item

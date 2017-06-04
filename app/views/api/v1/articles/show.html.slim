@@ -9,7 +9,7 @@ hr
 
 .comment-box
   h1 Comment
-  = simple_form_for @comment, url: api_v1_article_comments_path(@article), method: :post, remote: true do |f|
+  = simple_form_for @comment, url: api_v1_article_comments_path(@article), method: :post do |f|
     = f.input :comment_message, placeholder: "Add a comment", class: "form-control"
     = f.button :submit, class: "btn btn-primary"
 

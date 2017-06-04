@@ -4,7 +4,7 @@
 
 Submitted by: **Vo Tan Tho**
 
-URL:
+URL: https://blogrth.herokuapp.com/
 
 ## User Stories
 
@@ -20,15 +20,38 @@ URL:
 
 #### API
 
-- [ ] Provides a RESTful API for retrieve posts.
-- [ ] Supports search for the above API.
+- [x] Provides a RESTful API for retrieve posts.
+- [x] Supports search for the above API.
 
 #### Additional
 
-- [ ] Deploy your work on Heroku.
+- [x] Deploy your work on Heroku.
 - [x] Push your code to Github.
 - [x] Bootstrap for UI.
 
 ## Notes
 
+### How to run it
+The first, make sure you installed postgresql, ruby and rails. 
+Run command:
+
+```bash
+cd /path/sourcecode
+bundle install
+rails db:create
+rails db:migrate
+rails db:seed
+rails s
+
+```
+
+I provide 2 API return json data:
+- /api/v1/search.json?&search=a
+- /api/v1/articles.json
+
+
+### About technical
+- Faker(generate database)
+- Devise(authentication)
+- Bootstrap-material-design(UI)
 

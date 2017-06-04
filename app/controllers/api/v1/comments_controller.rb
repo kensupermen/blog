@@ -13,7 +13,7 @@ class Api::V1::CommentsController < ApplicationController
         format.html { redirect_to api_v1_article_path(@article) }
         format.json { render :show, status: :created, location: @article }
       else
-        format.html { render :new }
+        format.html { redirect_to api_v1_article_path(@article) }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end

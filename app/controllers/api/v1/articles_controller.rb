@@ -14,11 +14,8 @@ class Api::V1::ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.order(created_at: :desc)
-  end
-
-  def get_all_articles
-    @articles = Article.all.order(created_at: :desc)
     respond_to do |format|
+      format.html
       format.json { render json: @articles }
     end
   end
@@ -26,6 +23,7 @@ class Api::V1::ArticlesController < ApplicationController
   def search
     @articles = Article.where('title like ?', '%' + params[:search] + '%')
     respond_to do |format|
+      format.html
       format.json { render json: @articles }
     end
   end

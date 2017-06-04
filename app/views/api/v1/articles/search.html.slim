@@ -1,2 +1,17 @@
-h1 Articles#search
-p Find me in app/views/articles/search.html.slim
+- if @articles.blank?
+  h1 Article not found
+- else
+  .row
+    h1 Articles
+  - @articles.each do | article |
+    .row
+      h4
+        = link_to article.title, api_v1_article_path(article.id)
+    .row
+      .time_created
+        = "Posted " + time_ago_in_words(article.created_at, include_seconds: true) + " ago"
+    .row
+      p
+        = article.body
+    hr
+
